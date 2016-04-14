@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements ItemTouchHelperAd
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//zhouqiang
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.re);
         ArrayList<String> s = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity implements ItemTouchHelperAd
         recyclerView.setLayoutManager(l);
         RecycAdapter recycAdapter = new RecycAdapter(this, s);
         recyclerView.setAdapter(recycAdapter);
-        callback = new helper(recycAdapter,this);
+        callback = new helper(recycAdapter, this);
 
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
-        Log.d(";;","");
+        Log.d(";;", "");
         touchHelper.attachToRecyclerView(recyclerView);
 
     }
@@ -50,6 +50,6 @@ public class MainActivity extends AppCompatActivity implements ItemTouchHelperAd
 
     @Override
     public void onItemDismiss(int position) {
-        startActivity(new Intent(MainActivity.this,Main2Activity.class));
+        startActivity(new Intent(MainActivity.this, Main2Activity.class));
     }
 }
