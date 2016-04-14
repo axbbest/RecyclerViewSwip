@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.tx.zq.recyctest.Base.Main2Activity;
@@ -22,8 +23,6 @@ public class MainActivity extends AppCompatActivity implements ItemTouchHelperAd
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //安小贝
-
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.re);
         ArrayList<String> s = new ArrayList<>();
@@ -38,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements ItemTouchHelperAd
         callback = new helper(recycAdapter,this);
 
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
-
+        Log.d(";;","");
         touchHelper.attachToRecyclerView(recyclerView);
 
     }
